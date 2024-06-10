@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Developer's Library - C Language</title>
+    <link rel="stylesheet" href="C-ch.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="front-end-hero.png" alt="Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="allcheatsheet.html">Cheat-Sheet</a></li>
+                <li><a href="allprojects.html">Projects</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="index.html#FAQ">FAQ</a></li>
+            </ul>
+        </nav>
+        <div class="social-icons">
+            <a href="https://api.whatsapp.com/send?phone=919661850789&text=Hello!"><i class="fab fa-whatsapp"></i></a>
+            <a href="https://www.instagram.com/developers.library/"><i class="fab fa-instagram"></i></a>
+        </div>
+        <button class="menu-toggle">☰</button>
+    </header>
+    <main>
+        <h1 class="chname">Chapter.4.3</h1>
+        <section>
+            <h1>Function Call</h1>
+
+            <p>A function can be accessed, i.e., called by specifying its name, followed by a list of arguments enclosed
+                in parentheses and separated by commas.</p>
+            <ul>
+                <li>If the function call does not require any arguments, an empty pair of parentheses must follow the
+                    name of the function.</li>
+                <li>The arguments within the function call are called actual parameters or actual arguments.</li>
+                <li>The actual arguments may be constants, variables, or more complex expressions.</li>
+                <li>Each actual argument must be of the same type as its corresponding formal arguments.</li>
+                <li>Remember that it is the value of each actual argument that is transferred into the function and
+                    assigned to the corresponding formal arguments.</li>
+            </ul>
+
+            <p>The general form of a function call is given below:</p>
+
+            <pre><code>fun(a, b);</code></pre>
+
+            <ul>
+                <li>Where <code>fun</code> is the name of the function.</li>
+                <li><code>a</code>, <code>b</code> are the actual arguments within the parentheses.</li>
+                <li>There will be no return value in this function call, and it ends with a semicolon.</li>
+            </ul>
+
+            <p>If the function returns a value, then the function call is often written as an assignment statement,
+                e.g.,</p>
+
+            <pre><code>a = area(rad);
+                 or 
+            s = sum(n1, n2);</code></pre>
+
+            <p>These functions will return a value and assign it to <code>a</code> and <code>s</code> respectively. On
+                the other hand, if the function does not return anything, the function call will be, e.g.,</p>
+
+            <pre><code>message();</code></pre>
+        </section>
+        <section>
+            <h1>Return Statement</h1>
+
+            <p>The general form of the return statement is given below:</p>
+
+            <pre><code>return(exp);</code></pre>
+
+            <p>which can be a constant, variable, or an expression. Parentheses around <code>exp</code> are optional.
+            </p>
+            <p>The return statement is used to serve two purposes:</p>
+            <ul>
+                <li>The return statement immediately transfers the control back to the calling program.</li>
+                <li>It returns the value after return to the calling program.</li>
+            </ul>
+
+            <p>The return statement need not always be at the end of the called function. Also, there is no restriction
+                on the number of return statements that are present in the function. However, there is one limitation of
+                return, i.e., it can return only one value.</p>
+        </section>
+        <section>
+            <h2>Example</h2>
+
+            <pre><code>big(int a, int b)
+            {
+                if (a > b)
+                   return(a);
+                else
+                   return(b);
+            }</code></pre>
+
+            <p>In the function, if the value of <code>a</code> is greater than <code>b</code>, then <code>a</code> will
+                be returned; otherwise, <code>b</code> will be returned to the calling function.</p>
+        </section>
+<section>
+            <div class="container">
+                <button id="prevButton">⮜ Prev</button>
+                <button id="nextButton">Next ⮞</button>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="footer-content">
+            <div class="about-section">
+                <h3>About Us</h3>
+                <p>Welcome to Developer's Library, your ultimate resource for learning programming. Developer's Library
+                    is your go-to platform for free programming Courses/Cheat-Sheet/Projects. Our mission is to provide
+                    high-quality, free educational content to help you succeed in your programming journey. Whether
+                    you're a beginner or an advanced learner, we have something for you.</p>
+            </div>
+            <div class="footer-menu">
+                <h3>Menu</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="terms&conditions.html">Terms and Conditions</a></li>
+                    <li><a href="privacypolicy.html">Privacy Policy</a></li>
+                    <li><a href="disclaimer.html">Disclaimer</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Developer's Library. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

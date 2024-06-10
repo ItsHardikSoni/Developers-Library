@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Developer's Library - C Language</title>
+    <link rel="stylesheet" href="C-ch.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="front-end-hero.png" alt="Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="allcheatsheet.html">Cheat-Sheet</a></li>
+                <li><a href="allprojects.html">Projects</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="index.html#FAQ">FAQ</a></li>
+            </ul>
+        </nav>
+        <div class="social-icons">
+            <a href="https://api.whatsapp.com/send?phone=919661850789&text=Hello!"><i class="fab fa-whatsapp"></i></a>
+            <a href="https://www.instagram.com/developers.library/"><i class="fab fa-instagram"></i></a>
+        </div>
+        <button class="menu-toggle">☰</button>
+    </header>
+    <main>
+        <h1 class="chname">Chapter.5 - Scope Rules of Variables</h1>
+        <section>
+            <h1>Scope Rules of Variables</h1>
+            <p>Scope Rules – The range of the code in a program over which a variable has meaning is called the scope of the variable. In simple terms, the scope of a variable determines how it can be accessed by different parts of the program.</p>
+            <p>There are three types of scope normally in C:</p>
+            <ul>
+                <li>Local Scope</li>
+                <li>Function Scope</li>
+                <li>File Scope and Global Scope</li>
+            </ul>
+        <section>    <h2>Types of Scope Rules</h2>
+            <p>Here we define all the types of Scope Rules:</p>
+        </section>
+        <section>Local Scope</h3>
+            <p>A block of statements in C is surrounded by curly braces, i.e., <code>{</code> and <code>}</code>. We can declare variables inside the block; such variables, called local variables, can be referenced only within the body of the block.</p>
+            <p>When the control reaches the open braces, these variables come into existence and get destroyed as soon as the control leaves the block through the closing brace.</p>
+            <p>So the local variables are available to all the blocks enclosed by the block in which they have been declared.</p>
+            <pre>
+        while (flag) {
+            int x;
+            if (i > x) {
+                int j;
+                // -
+            }
+        }
+            </pre>
+            <ul>
+                <li>The scope of <code>x</code> is the while block, and <code>j</code> is the if block.</li>
+                <li>The variable <code>x</code> can also be referenced in the if block because this block is completely enclosed in the while block.</li>
+                <li>On the other hand, the scope of <code>j</code> is only the if block. Since a function is a block in itself, all the variables declared in it have local scope.</li>
+                <li>The formal parameters in a function have local scope.</li>
+            </ul>
+        </section>
+        <section>    <h3>Function Scope</h3>
+            <ul>
+                <li>The function scope pertains to the labels declared in a function in the sense that a label can be used anywhere in the function in which it is declared.</li>
+                <li>Thus, we can use different labels with the same names in different functions.</li>
+            </ul>
+        </section>
+        <section>    <h3>File Scope or Global Scope</h3>
+            <p>Since the global variables are declared outside all blocks and functions, they are available to all the blocks and functions.</p>
+            <p>Thus, the scope of a global variable is the entire program file. This type of scope is known as file scope.</p>
+            <p>e.g. global variables <code>rate</code> and <code>qty</code> in the following have file scope:</p>
+            <pre>
+        int qty, rate;
+        void main() {
+            int gross, net;
+            // -
+        }
+        
+        void fun() {
+            char c;
+            // -
+            { 
+                int a;
+                // -
+            }
+        }
+            </pre>
+        </section>
+        <section>    <h2>Scope Rules Summary</h2>
+            <ul>
+                <li>A local variable can be accessed only within the block in which it is declared. The local variable declared in a function exists only during the execution of the function. Therefore, these variables are also known as automatic because they are automatically created and destroyed.</li>
+                <li>The scope of formal parameters is local to the function in which they are defined.</li>
+                <li>Since the global variables are not declared in a particular function, they are available to all the functions. Thus, the scope of a global variable is the entire program.</li>
+            </ul>
+        </section>
+        </section>
+        <section>
+            <div class="container">
+                <button id="prevButton">⮜ Prev</button>
+                <button id="nextButton">Next ⮞</button>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="footer-content">
+            <div class="about-section">
+                <h3>About Us</h3>
+                <p>Welcome to Developer's Library, your ultimate resource for learning programming. Developer's Library
+                    is your go-to platform for free programming Courses/Cheat-Sheet/Projects. Our mission is to provide
+                    high-quality, free educational content to help you succeed in your programming journey. Whether
+                    you're a beginner or an advanced learner, we have something for you.</p>
+            </div>
+            <div class="footer-menu">
+                <h3>Menu</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="terms&conditions.html">Terms and Conditions</a></li>
+                    <li><a href="privacypolicy.html">Privacy Policy</a></li>
+                    <li><a href="disclaimer.html">Disclaimer</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Developer's Library. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

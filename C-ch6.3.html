@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Developer's Library - C Language</title>
+    <link rel="stylesheet" href="C-ch.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="front-end-hero.png" alt="Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="allcheatsheet.html">Cheat-Sheet</a></li>
+                <li><a href="allprojects.html">Projects</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="index.html#FAQ">FAQ</a></li>
+            </ul>
+        </nav>
+        <div class="social-icons">
+            <a href="https://api.whatsapp.com/send?phone=919661850789&text=Hello!"><i class="fab fa-whatsapp"></i></a>
+            <a href="https://www.instagram.com/developers.library/"><i class="fab fa-instagram"></i></a>
+        </div>
+        <button class="menu-toggle">☰</button>
+    </header>
+    <main>
+        <section>
+            <h1 class="chname">Chapter.6.3</h1>
+            <h1>One Dimensional Array</h1>
+            <p>Once an array is defined, each element of the array can be accessed by the array name followed by an index enclosed in brackets. All array elements are numbered starting from 0.</p>
+            <p>Example:</p>
+            <pre><code>int s[5] = {10, 20, 30, 40, 50};</code></pre>
+            <img class="chimg" src="C-ch 6.3 - 20-1024x576.png" alt="Error">
+            <p>So the valid range of subscripts is 0 to 4, i.e., the lower bound is 0 and the upper bound is one less than the specified value in the subscript, i.e., 5-1 = 4.</p>
+        </section>
+        <section>    <h1>Two Dimensional Array</h1>
+            <p>In a two-dimensional array, an element can be accessed simply by the array name followed by two index numbers enclosed in brackets.</p>
+            <p>Example:</p>
+            <pre><code>int a[2][3] = {10, 20, 30, 40, 50, 60};</code></pre>
+            
+            <table border="1">
+                <tr>
+                    <th>Access</th>
+                    <th>Array Element</th>
+                    <th>Value</th>
+                </tr>
+                <tr>
+                    <td>To access the first row and first column</td>
+                    <td><code>a[0][0]</code></td>
+                    <td>10</td>
+                </tr>
+                <tr>
+                    <td>To access the first row and second column</td>
+                    <td><code>a[0][1]</code></td>
+                    <td>20</td>
+                </tr>
+                <tr>
+                    <td>To access the first row and third column</td>
+                    <td><code>a[0][2]</code></td>
+                    <td>30</td>
+                </tr>
+                <tr>
+                    <td>To access the second row and first column</td>
+                    <td><code>a[1][0]</code></td>
+                    <td>40</td>
+                </tr>
+                <tr>
+                    <td>To access the second row and second column</td>
+                    <td><code>a[1][1]</code></td>
+                    <td>50</td>
+                </tr>
+                <tr>
+                    <td>To access the second row and third column</td>
+                    <td><code>a[1][2]</code></td>
+                    <td>60</td>
+                </tr>
+            </table>
+        </section>
+        <section>
+            <div class="container">
+                <button id="prevButton">⮜ Prev</button>
+                <button id="nextButton">Next ⮞</button>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="footer-content">
+            <div class="about-section">
+                <h3>About Us</h3>
+                <p>Welcome to Developer's Library, your ultimate resource for learning programming. Developer's Library
+                    is your go-to platform for free programming Courses/Cheat-Sheet/Projects. Our mission is to provide
+                    high-quality, free educational content to help you succeed in your programming journey. Whether
+                    you're a beginner or an advanced learner, we have something for you.</p>
+            </div>
+            <div class="footer-menu">
+                <h3>Menu</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="terms&conditions.html">Terms and Conditions</a></li>
+                    <li><a href="privacypolicy.html">Privacy Policy</a></li>
+                    <li><a href="disclaimer.html">Disclaimer</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Developer's Library. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Developer's Library - C Language</title>
+    <link rel="stylesheet" href="C-ch.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="front-end-hero.png" alt="Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="allcheatsheet.html">Cheat-Sheet</a></li>
+                <li><a href="allprojects.html">Projects</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="index.html#FAQ">FAQ</a></li>
+            </ul>
+        </nav>
+        <div class="social-icons">
+            <a href="https://api.whatsapp.com/send?phone=919661850789&text=Hello!"><i class="fab fa-whatsapp"></i></a>
+            <a href="https://www.instagram.com/developers.library/"><i class="fab fa-instagram"></i></a>
+        </div>
+        <button class="menu-toggle">☰</button>
+    </header>
+    <main>
+        <section>
+            <h1 class="chname">Chapter.6.5</h1>
+            <h1>Initializing</h1>
+
+            <p>When we declare an array, the elements of the array have values according to the class of the array:</p>
+
+            <ul>
+                <li>0 value for static and extern</li>
+                <li>Garbage value for auto and register</li>
+            </ul>
+
+            <p><strong>Example:</strong></p>
+
+            <pre><code>int S[10]; // An Array S of 10 elements with initial value as Garbage value
+</code></pre>
+
+            <p>In C, it is also possible to initialize the elements of the array at the same place where they are
+                declared, i.e., in the beginning itself.</p>
+        </section>
+        <section>
+            <h2>Initializing a One-Dimensional Array</h2>
+
+            <p>One-dimensional array can be declared and initialized at the same place as:</p>
+            <pre><code>int S[10] = {50, 20, 70, 15, 75, 65, 67, 9, 55, 90};</code></pre>
+            <img class="chimg" src="C-ch 6.5.1 - 50-1024x576.png" alt="Error">
+            <p>In this case,
+            <pre><code>S[0] = 50</code>, <code>S[1] = 20</code>, ..., <code>S[9] = 90</code>.</p></pre>
+
+            <p><strong>Note:</strong> In one-dimensional array when we declare and initialize an array at the same
+                place, then to specify subscript value is optional.</p>
+
+            <p>So,</p>
+
+        <pre><code>int S[] = {50, 20, 70, 15, 75, 65, 67, 9, 55, 90};</code></pre>
+
+            <p><strong>Example:</strong></p>
+            <pre><code>float rate[] = {55.5, 75.6, 90.8, 20.0};
+                </code></pre>
+            <img class="chimg" src="C-ch 6.5.2 - 55.5-1024x576.png" alt="Error">
+            <p><strong>Example:</strong></p>
+            <pre><code>char name[] = {'H', 'T', 'T', 'E', 'N'};</code></pre>
+            <img src="C-ch 6.5.3 - HITEN-1024x576.png" alt="" class="chimg">
+            <p><strong>Example:</strong></p>
+            <pre><code>int i[10] = {10, 20, 30, 40, 50};</code></pre>
+            <p>It will take the first five elements as they are and the next five as garbage values.</p>
+
+            <p><strong>Example:</strong></p>
+
+            <pre><code>int i[5] = {5, 10, 15, 20, 25, 30, 35, 40};
+</code></pre>
+
+            <p>Compiler will flag an error message as the number of elements are more in the list than the declared
+                size.</p>
+
+            <h2>Initializing Two-Dimensional Array</h2>
+
+            <ul>
+                <li>It can be treated as an array of one-dimensional arrays.</li>
+                <li>Two-dimensional array can also be declared and initialized at the same place.</li>
+            </ul>
+
+            <pre><code>int a [4][5] = {
+                {0,1,2,3,4},      --Row 1
+                {5,6,7,8,9},      --Row 2
+                {10,11,12,13,14}, --Row 3
+                {15,16,17,18,19}, --Row 4
+             };
+                col1 col2 col3 col4 col5
+</code></pre>
+            <ul>
+                <li>
+                    <p>Where <code>a</code> is the name of the 2D array of <code>int</code> type
+                </li>
+                <li>4 is the number of rows</li>
+                <li>5 is the number of columns</li>
+            </ul>
+            <p>The same array can be initialized as given below:</p>
+            <pre><code>int a[4][5] = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19};
+</code></pre>
+
+            <p>In this case, the first five elements are assigned to the first row, the next five to the second row, the
+                next five to the third row, and the last five to the fourth row.</p>
+
+            <p>The problem in this version of initialization is that it is not as appropriate and understandable as the
+                first one. So the first version is much better than this version.</p>
+
+        </section>
+        <section><h2>Initializing a Three-Dimensional Array</h2>
+
+<p>Three-dimensional array can be looked like an array of two-dimensional arrays and can be declared as well as initialized at the same place as given below:</p>
+
+<pre><code>int m[2][3][2] = {
+    {
+        {0, 1},
+        {2, 3},
+        {4, 5}
+    },
+    {
+        {6, 7},
+        {8, 9},
+        {10, 11}
+    }
+};
+</code></pre>
+
+<p>Where <code>m</code> is the name of the array of <code>int</code> type, 2 is the first subscript, 3 is the second subscript, and 2 is the third subscript.</p>
+
+<p>The same can also be initialized as below:</p>
+
+<pre><code>int m[2][3][2] = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11};
+</code></pre>
+
+<p><strong>Note:</strong> In two-dimensional array, if we want to declare and initialize the array at the same place, the first subscript is optional to specify, whereas the second subscript is a must.</p>
+
+<p>e.g. <pre><code>a[][5] = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19}</code>;</pre></p>
+</section>
+        <section></section>
+        <section></section>
+        <section>
+            <div class="container">
+                <button id="prevButton">⮜ Prev</button>
+                <button id="nextButton">Next ⮞</button>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="footer-content">
+            <div class="about-section">
+                <h3>About Us</h3>
+                <p>Welcome to Developer's Library, your ultimate resource for learning programming. Developer's Library
+                    is your go-to platform for free programming Courses/Cheat-Sheet/Projects. Our mission is to provide
+                    high-quality, free educational content to help you succeed in your programming journey. Whether
+                    you're a beginner or an advanced learner, we have something for you.</p>
+            </div>
+            <div class="footer-menu">
+                <h3>Menu</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="terms&conditions.html">Terms and Conditions</a></li>
+                    <li><a href="privacypolicy.html">Privacy Policy</a></li>
+                    <li><a href="disclaimer.html">Disclaimer</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Developer's Library. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

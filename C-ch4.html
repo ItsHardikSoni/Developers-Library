@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Developer's Library - C Language</title>
+    <link rel="stylesheet" href="C-ch.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="front-end-hero.png" alt="Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="allcheatsheet.html">Cheat-Sheet</a></li>
+                <li><a href="allprojects.html">Projects</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="index.html#FAQ">FAQ</a></li>
+            </ul>
+        </nav>
+        <div class="social-icons">
+            <a href="https://api.whatsapp.com/send?phone=919661850789&text=Hello!"><i class="fab fa-whatsapp"></i></a>
+            <a href="https://www.instagram.com/developers.library/"><i class="fab fa-instagram"></i></a>
+        </div>
+        <button class="menu-toggle">☰</button>
+    </header>
+    <main>
+        <section>
+            <h1 class="chname">Chapter.4 - C Functions</h1>
+            <h1>What are the Functions in C ???</h1>
+            <p>Functions – If an operation has to be performed at many different places in a program, then the programmer writes the same set of instructions as many times as it is required. For example, in a program that computes the area of a triangle in different parts of a program, it would be wasteful of the programmer’s time and effort to code the same sequence of instructions every time it is required. This activity not only increases the size of the program but also adds the chances of making typographical mistakes.</p>
+
+            <p>A better way to achieve the same effect, however, would be to use subprograms or functions. A subprogram or function is a name given to a set of instructions that can be called by another program or a subprogram. This technique simplifies the programming process because a single set of instructions in the form of a subprogram is being used for all instances of computational requirements with data changing. Whenever the task is to be done, the control is transferred back to the normal program flow.</p>
+            <p>A function is a complete program in itself, in the sense that its structure is similar to the C main() function except that the name main() is replaced by the name of the function. The general form of the function is given below:</p>
+        </section>
+        <section><h2>The General Form of the Function is given below:</h2>
+            <pre><code>&lt;type&gt; name (arguments)
+                {
+                ......
+                }</code></pre>
+                
+                            <ul>
+                                <li><strong>&lt;type&gt;</strong> is the type of value to be returned by the function. If no value is returned, then the keyword <em>void</em> should be used.</li>
+                                <li><strong>name</strong> is a user-defined name of the function. The function can be called from another function by this name.</li>
+                                <li><strong>arguments</strong> is a list of parameters. This can be omitted also by leaving the parameters empty.</li>
+                            </ul>
+        </section>
+        <section>            <p>The program segment enclosed within the opening brace and closing brace is known as the function body.</p>
+
+            <p>Every C program consists of one or more functions. One of the functions must be main(). The execution of the program always begins with main(). No function can work independently but they have to be called in the main() function.</p>
+</section>
+<section>
+    <div class="container">
+        <button id="prevButton">⮜ Prev</button>
+        <button id="nextButton">Next ⮞</button>
+    </div>
+</section>
+    </main>
+    <footer>
+        <div class="footer-content">
+            <div class="about-section">
+                <h3>About Us</h3>
+                <p>Welcome to Developer's Library, your ultimate resource for learning programming. Developer's Library
+                    is your go-to platform for free programming Courses/Cheat-Sheet/Projects. Our mission is to provide
+                    high-quality, free educational content to help you succeed in your programming journey. Whether
+                    you're a beginner or an advanced learner, we have something for you.</p>
+            </div>
+            <div class="footer-menu">
+                <h3>Menu</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="terms&conditions.html">Terms and Conditions</a></li>
+                    <li><a href="privacypolicy.html">Privacy Policy</a></li>
+                    <li><a href="disclaimer.html">Disclaimer</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Developer's Library. All rights reserved.</p>
+        </div>
+    </footer>
+    
+    <script src="script.js"></script>
+</body>
+
+</html>

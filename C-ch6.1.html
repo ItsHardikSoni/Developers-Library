@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Developer's Library - C Language</title>
+    <link rel="stylesheet" href="C-ch.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="front-end-hero.png" alt="Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="allcheatsheet.html">Cheat-Sheet</a></li>
+                <li><a href="allprojects.html">Projects</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="index.html#FAQ">FAQ</a></li>
+            </ul>
+        </nav>
+        <div class="social-icons">
+            <a href="https://api.whatsapp.com/send?phone=919661850789&text=Hello!"><i class="fab fa-whatsapp"></i></a>
+            <a href="https://www.instagram.com/developers.library/"><i class="fab fa-instagram"></i></a>
+        </div>
+        <button class="menu-toggle">☰</button>
+    </header>
+    <main>
+        <section>
+            <h1 class="chname">Chapter.6.1</h1>
+        </section>
+        <section>
+            <h1>Definition of an Array</h1>
+            <p>An Array is a collection of homogeneous data elements of a specific data type (i.e. int or float or char)
+                that have been given a single name, which are stored at contiguous memory locations (i.e. one after the
+                other).</p>
+            <p>Each individual element of an Array is referenced by a subscripted variable. The subscript or an index is
+                enclosed in brackets after the Array name. Example:</p>
+            <pre><code>int s[40];</code></pre>
+            <ul>
+                <li><code>int</code> is the data type.</li>
+                <li><code>s</code> is the name of the array.</li>
+                <li><code>[40]</code> is the subscript or index.</li>
+            </ul>
+            <p>If one subscript is used to refer to an element of an array, the array is known as a one-dimensional or
+                linear array. If two subscripts are used to refer to an element of an array, the array is known as a
+                two-dimensional array or matrix, and so on.</p>
+            <p>Arrays that have two or more subscripts are known as multidimensional arrays. For each subscript, we use
+                a pair of brackets. Example:</p>
+            <pre><code>int a[5][6]; // Two Dimensional Array because of two subscripts</code></pre>
+            <ul>
+                <li><code>[5]</code> is the subscript 1.</li>
+                <li><code>[6]</code> is the subscript 2.</li>
+            </ul>
+        </section>
+        <section>
+            <h2>Declaration of Array</h2>
+            <ul>
+                <li>Before using an array in a program, it must be declared first like other variables.</li>
+                <li>To declare an Array, we must provide the following information:</li>
+                <ul>
+                    <li>Data Type of an Array</li>
+                    <li>The name of the Array (rules are the same as variables name)</li>
+                    <li>The number of subscripts in an Array.</li>
+                    <li>The maximum value of each subscript.</li>
+                </ul>
+            </ul>
+            <p>So the general form or syntax of array declaration is:</p>
+            <pre><code>Storage_sp type name[sub1][sub2]....;</code></pre>
+            <ul>
+                <li><code>Storage_sp</code> is the Storage class specifier and is optional.</li>
+                <li><code>type</code> is the data type (int, char, or float).</li>
+                <li><code>name</code> is the name of the array.</li>
+                <li><code>sub1, sub2,…</code> are the number of subscripts available in an array, which are used to
+                    specify the dimensions of an array.</li>
+            </ul>
+            <p>Example:</p>
+            <pre><code>int s[40];   // One Subscript so one-dimension Array</code></pre>
+            <ul>
+                <li>Where <code>int</code> specifies the type of the variable.</li>
+                <li><code>s</code> is the name of the array variable.</li>
+                <li><code>[40]</code> is the subscript to specify that there are a maximum of 40 elements stored in this
+                    array.</li>
+            </ul>
+            <p><strong>Note:</strong> The elements in an array start with 0, not one, and end with one less than the
+                value of the subscript.</p>
+        </section>
+        <section>
+            <div class="container">
+                <button id="prevButton">⮜ Prev</button>
+                <button id="nextButton">Next ⮞</button>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="footer-content">
+            <div class="about-section">
+                <h3>About Us</h3>
+                <p>Welcome to Developer's Library, your ultimate resource for learning programming. Developer's Library
+                    is your go-to platform for free programming Courses/Cheat-Sheet/Projects. Our mission is to provide
+                    high-quality, free educational content to help you succeed in your programming journey. Whether
+                    you're a beginner or an advanced learner, we have something for you.</p>
+            </div>
+            <div class="footer-menu">
+                <h3>Menu</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="terms&conditions.html">Terms and Conditions</a></li>
+                    <li><a href="privacypolicy.html">Privacy Policy</a></li>
+                    <li><a href="disclaimer.html">Disclaimer</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Developer's Library. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Developer's Library - C Language</title>
+    <link rel="stylesheet" href="C-ch.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="front-end-hero.png" alt="Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="allcheatsheet.html">Cheat-Sheet</a></li>
+                <li><a href="allprojects.html">Projects</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="index.html#FAQ">FAQ</a></li>
+            </ul>
+        </nav>
+        <div class="social-icons">
+            <a href="https://api.whatsapp.com/send?phone=919661850789&text=Hello!"><i class="fab fa-whatsapp"></i></a>
+            <a href="https://www.instagram.com/developers.library/"><i class="fab fa-instagram"></i></a>
+        </div>
+        <button class="menu-toggle">☰</button>
+    </header>
+    <main>
+        <section>
+            <h1 class="chname">Chapter.6.6</h1>
+            <h2>Passing One Dimensional Array to a Function</h2>
+
+            <p>Like other types of arguments, array elements can also be passed to a function by calling the function by
+                value or by reference.</p>
+
+            <p>In call by value method, we pass the values of array elements to the function whereas in call by
+                reference, we pass addresses of array elements to the function.</p>
+
+            <p><strong>Example:</strong> Pass Individual elements of an array to a function one by one (i.e., call by
+                value)</p>
+
+            <pre><code>#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+
+void main() {
+    void show(int);
+    int m[] = {50, 60, 70, 40, 90, 80};
+    clrscr();
+    for (int i = 0; i &lt; 6; i++)
+        show(m[i]);
+    getch();
+}
+
+void show(int marks) {
+    printf("\t%d", marks);
+}
+</code></pre>
+
+            <p><strong>Output:</strong></p>
+
+            <pre>
+50  60  70  40  90  80
+</pre>
+
+            <p><strong>Same Problem using call by reference:</strong></p>
+
+            <pre><code>void main() {
+    void show(int*);
+    int m[] = {50, 60, 70, 40, 90, 80};
+    clrscr();
+    for (int i = 0; i &lt; 6; i++)
+        show(m + i);
+}
+
+void show(int *marks) {
+    printf("\t%d", *marks);
+}
+</code></pre>
+        </section>
+        <section>
+            <h2>Passing Entire Array to Function</h2>
+
+            <p>In place of passing individual elements of an array one by one to a function, we can also pass an
+                argument array to a function.</p>
+
+            <p>It can be implemented by the following:</p>
+
+            <p><strong>Example: Passing Entire Array</strong></p>
+
+            <pre><code>#include &lt;stdio.h&gt;
+    #include &lt;conio.h&gt;
+    
+    void main() {
+        void show(int*, int);
+        int m[] = {50, 60, 70, 40, 90, 80};
+        clrscr();
+        show(m, 6); // m is the starting address of an array
+        getch();
+    }
+    
+    void show(int *marks, int n) {
+        for (int i = 0; i &lt; n; i++) {
+            printf("\t%d", *marks);
+            marks++;
+        }
+    }
+    </code></pre>
+        </section>
+        <section>
+            <h2>Passing Two Dimensional Array to Function</h2>
+
+            <p>Elements of a two-dimensional array can be passed to a function in the same form as that of a
+                one-dimensional array.</p>
+
+            <p><strong>Example: Demonstration of passing 2D array elements to a function</strong></p>
+
+            <pre><code>#include &lt;stdio.h&gt;
+        #include &lt;conio.h&gt;
+        
+        void main() {
+            void show(int[][], int, int);
+            int a[3][4] = {
+                           {1, 2, 3, 4},
+                           {5, 6, 7, 8},
+                           {9, 10, 11, 12},
+                         };
+            clrscr();
+            show(a, 3, 4);
+            getch();
+        }
+        
+        void show(int n[][4], int r, int c) {
+            for (int i = 0; i &lt; r; i++) {
+                for (int j = 0; j &lt; c; j++)
+                    printf("%d\t", n[i][j]);
+                printf("\n");
+            }
+        }
+        </code></pre>
+        </section>
+        <section>
+            <div class="container">
+                <button id="prevButton">⮜ Prev</button>
+                <button id="nextButton">Next ⮞</button>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="footer-content">
+            <div class="about-section">
+                <h3>About Us</h3>
+                <p>Welcome to Developer's Library, your ultimate resource for learning programming. Developer's Library
+                    is your go-to platform for free programming Courses/Cheat-Sheet/Projects. Our mission is to provide
+                    high-quality, free educational content to help you succeed in your programming journey. Whether
+                    you're a beginner or an advanced learner, we have something for you.</p>
+            </div>
+            <div class="footer-menu">
+                <h3>Menu</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="terms&conditions.html">Terms and Conditions</a></li>
+                    <li><a href="privacypolicy.html">Privacy Policy</a></li>
+                    <li><a href="disclaimer.html">Disclaimer</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Developer's Library. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

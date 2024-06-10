@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Developer's Library - C Language</title>
+    <link rel="stylesheet" href="C-ch.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="front-end-hero.png" alt="Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="allcheatsheet.html">Cheat-Sheet</a></li>
+                <li><a href="allprojects.html">Projects</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="index.html#FAQ">FAQ</a></li>
+            </ul>
+        </nav>
+        <div class="social-icons">
+            <a href="https://api.whatsapp.com/send?phone=919661850789&text=Hello!"><i class="fab fa-whatsapp"></i></a>
+            <a href="https://www.instagram.com/developers.library/"><i class="fab fa-instagram"></i></a>
+        </div>
+        <button class="menu-toggle">☰</button>
+    </header>
+    <main>
+        <section>
+            <h1 class="chname">Chapter.5.1</h1>
+            <h1>Storage Classes</h1>
+            <p>Storage Classes – Each and every variable declared in C contains not only its data type but also has a
+                storage class specified with it. If we do not specify the storage class of a variable, the compiler will
+                assume its storage class as default i.e. automatic.</p>
+            <p>The storage class of a variable tells us about (characteristics of Storage Class):</p>
+            <ul>
+                <li>Storage place of the variable i.e. Memory of CPU register.</li>
+                <li>The initial value of the variable, if it is not specified in the program.</li>
+                <li>The scope or the visibility of the variable.</li>
+                <li>The lifetime of the variable i.e. how long the variable exists.</li>
+            </ul>
+            <p>There are four types of Storage Classes in C. All of them have the four characteristics, according to
+                which they can be differentiated:</p>
+            <ul>
+                <li>Automatic Storage Class (with Specifier <code>auto</code>)</li>
+                <li>Register Storage Class (with Specifier <code>register</code>)</li>
+                <li>Static Storage Class (with specifier <code>static</code>)</li>
+                <li>External Storage Class (with Specifier <code>extern</code>)</li>
+            </ul>
+
+        </section>
+        <section>
+            <h2>1. Automatic Storage Class (Local Variables)</h2>
+            <p>The characteristics of automatic storage class variables are:</p>
+            <table>
+                <tr>
+                    <th>Storage</th>
+                    <td>Memory</td>
+                </tr>
+                <tr>
+                    <th>Default Initial Value</th>
+                    <td>Garbage value i.e. an unpredictable value.</td>
+                </tr>
+                <tr>
+                    <th>Scope or Visibility</th>
+                    <td>Local or visible to the block in which the variable is declared e.g. if the variable is declared
+                        in a function then it is only visible to that function.</td>
+                </tr>
+                <tr>
+                    <th>Life Time</th>
+                    <td>It retains its value till the control remains in the block in which the variable is declared.
+                        e.g. if the variable is declared in a function, it will retain its value till the control is in
+                        that function.</td>
+                </tr>
+            </table>
+            <p>Example: Demonstration of <code>auto</code> storage class with default value,</p>
+            <pre>
+                <code>
+        void main()
+        {
+            auto int i,j =5;
+            int k, l = 10;
+            printf("\n value of i = %d \n value of j = %d", i,j);
+            printf("\n value of k = %d \n value of l = %d", k,l);
+        }
+                </code>
+            </pre>
+            <p>Output:</p>
+            <pre>
+        value of i = 2009
+        value of j = 5
+        value of k = 1005
+        value of l = 10
+            </pre>
+            <p>The default storage class is <code>auto</code>. So whether or not it is defined it will work the same.
+            </p>
+            <p>The value of <code>i</code> and <code>k</code> are garbage values (unpredictable values) because they are
+                not defined in the program.</p>
+            <p>Example: Demonstration of scope or visibility and lifetime of <code>auto</code> storage class.</p>
+            <pre>
+                <code>
+        void main()
+        {
+            auto int x = 5; // block 3
+            {
+                auto int x = 10; // block 2
+                {
+                    auto int x = 15; // block 1
+                    {
+                        printf("\n%d", x);
+                    }
+                    printf("%d", x);
+                }
+                printf("%d", x);
+            }
+        }
+                </code>
+            </pre>
+            <p>Output:</p>
+            <pre>
+        15 10 5
+            </pre>
+            <ul>
+                <li>As its scope is local to the block in which it is defined so block 1 will print 15, block 2 will
+                    print 10 and block 3 will print 5.</li>
+                <li>These three variables <code>x</code> are treated as different for three blocks.</li>
+                <li>The life of <code>x</code> will persist as its value 15 in block 1 and then it expires.</li>
+                <li>After that another <code>x</code> whose value is 10 will persist in block 2 and then expires.</li>
+                <li>Similarly, the last <code>x</code> whose value is 5 will persist in block 3.</li>
+            </ul>
+        </section>
+        <section>
+            <h2>2. Register Storage Class</h2>
+            <p>The characteristics of register storage class variables are:</p>
+            <table>
+                <tr>
+                    <th>Storage</th>
+                    <td>CPU register</td>
+                </tr>
+                <tr>
+                    <th>Default Initial Value</th>
+                    <td>Garbage Value</td>
+                </tr>
+                <tr>
+                    <th>Scope</th>
+                    <td>Local to the block in which variable is declared (same as automatic)</td>
+                </tr>
+                <tr>
+                    <th>Lifetime</th>
+                    <td>It retains its value till the control remains in the block in which the variable is declared.
+                        (same as automatic)</td>
+                </tr>
+            </table>
+            <ul>
+                <li>A variable is nothing but a memory location in the main memory of the computer and the CPU has to
+                    access the main memory to manipulate the variables.</li>
+                <li>This activity slows down the execution of the program because main memory is about 10 times slower
+                    than the CPU.</li>
+                <li>Since a number of registers are available in the CPU itself and all of them are not used all the
+                    time, a few of them can be used to store some frequently used variables so that execution becomes
+                    faster.</li>
+                <li>C allows some variables to be declared as register variables. However, it is limited in numbers and
+                    varies from compiler to compiler.</li>
+                <li>The keyword <code>register</code> can be prefixed to an ordinary variable to declare it as a
+                    register variable.</li>
+            </ul>
+            <p>e.g. - <code>register int i;</code></p>
+            <ul>
+                <li>Normally registers are of 16-bit size so we can not use register with <code>float</code>,
+                    <code>double</code>, array or structure. But if we use them as a register, the compiler will
+                    automatically convert them into automatic.</li>
+                <li>We use frequently used variables e.g. loop counters as a register storage class because the speed of
+                    the program increases by using a variable as a register storage class.</li>
+            </ul>
+            <pre>
+                <code>
+        void main()
+        {
+            register int i;
+            for (i = 1; i < 100; i++)
+                printf("\n%d", i);
+        }
+                </code>
+            </pre>
+        </section>
+        <section>
+            <h2>3. Static Storage Class</h2>
+            <p>The characteristics of a variable defined to have static storage class are:</p>
+            <table>
+                <tr>
+                    <th>Storage</th>
+                    <td>Memory</td>
+                </tr>
+                <tr>
+                    <th>Default Initial Value</th>
+                    <td>Zero</td>
+                </tr>
+                <tr>
+                    <th>Scope or Visibility</th>
+                    <td>Local to the block in which the variable is declared (same as auto storage class)</td>
+                </tr>
+                <tr>
+                    <th>Lifetime</th>
+                    <td>It retains its value between different function calls i.e. when a function is called for the
+                        first time, a static variable is created with an initial value of zero, and in subsequent calls,
+                        it retains its present value.</td>
+                </tr>
+            </table>
+            <ul>
+                <li>If one desires that the local variable should retain its value even after the execution of the
+                    function in which it is declared, then the variable must be declared as static.</li>
+                <li>The value of the static variables is not destroyed when the function terminates.</li>
+                <li>The value is retained and is available to the user even if the control returns back to the function
+                    again.</li>
+            </ul>
+            <p>Example: Demonstration of static Storage class</p>
+            <pre>
+                <code>
+        #include &lt;stdio.h&gt;
+        #include &lt;conio.h&gt;
+        void main()
+        {
+            int i, r;
+            clrscr();
+            for (i = 1; i <= 5; i++)
+            {
+                r = tot(i);
+                printf("\t%d", r);
+            }
+            getch();
+        }
+        
+        int tot(int x)
+        {
+            static int s = 0;
+            s = s + x;
+            return (s);
+        }
+                </code>
+            </pre>
+            <p>The function <code>main()</code> calls the function <code>tot()</code> five times, each time sending the
+                value of <code>i</code> varying from 1 to 5.</p>
+            <p>In the function value is added to <code>s</code> and the accumulated result is returned.</p>
+            <p>Once the program is executed, the following output is produced.</p>
+            <pre>
+        1    3    6    10    15
+            </pre>
+            <p>i.e. the contents of variables are retained in each function call.</p>
+            <p>Example: Write the output of the following,</p>
+            <pre>
+                <code>
+        #include &lt;stdio.h&gt;
+        #include &lt;conio.h&gt;
+        static int i = 100;
+        void abc()
+        {
+            static int i = 10;
+            printf("\n First = %d", i);
+        }
+        void main()
+        {
+            static int i = 5;
+            clrscr();
+            abc();
+            printf("\t second %d", i);
+            getch();
+        }
+                </code>
+            </pre>
+            <p>Output:</p>
+            <pre>
+        First = 10
+        Second = 5
+            </pre>
+        </section>
+        <section>
+            <h2>4. External Storage Class</h2>
+            <p>The characteristics of variables defined to have extern storage class are:</p>
+            <table>
+                <tr>
+                    <th>Storage</th>
+                    <td>Memory</td>
+                </tr>
+                <tr>
+                    <th>Default Initial Value</th>
+                    <td>Zero</td>
+                </tr>
+                <tr>
+                    <th>Scope or Visibility</th>
+                    <td>Global</td>
+                </tr>
+                <tr>
+                    <th>Lifetime</th>
+                    <td>It retains its value throughout the program. So the lifetime is as long as the program’s
+                        execution does not come to an end.</td>
+                </tr>
+            </table>
+            <ul>
+                <li>External variables are declared outside all functions i.e. at the beginning of the program.</li>
+                <li>When the size of the program becomes very large then it has to be divided into parts and each part
+                    is stored in a separate function.</li>
+                <li>Global variables should be available to all the functions with the help of <code>extern</code>
+                    specifier.</li>
+            </ul>
+            <p>Example 1: Demonstration of external storage class</p>
+            <pre>
+                <code>
+        extern int rate;
+        void main()
+        {
+            //...
+        }
+        
+        void fun1()
+        {
+            //...
+        }
+        
+        void compute()
+        {
+            int tot, net;
+            //...
+            net = tot * rate;
+        }
+                </code>
+            </pre>
+            <p>It can be noted that the global variable <code>rate</code> has been defined at the beginning of the file.
+                So it is available globally i.e. to all the functions like <code>fun1()</code> and
+                <code>compute()</code>.</p>
+            <p>Note: It is not necessary to mention the keyword <code>extern</code> with external variables because they
+                are declared before <code>main()</code>.</p>
+            <p>e.g. <code>int rate;</code> // No need to mention <code>extern int rate;</code></p>
+            <pre>
+                <code>
+        void main()
+        {
+            //...
+        }
+                </code>
+            </pre>
+            <p>Example 2: What will be the output of the following:</p>
+            <pre>
+                <code>
+        int i; // Global variable
+        void main()
+        {
+            printf("\n i = %d", i);
+            increment();
+            decrement();
+        }
+        
+        void increment()
+        {
+            i++;
+            printf("\n i = %d", i);
+        }
+        
+        void decrement()
+        {
+            i--;
+            printf("\n i = %d", i);
+        }
+                </code>
+            </pre>
+            <p>Output:</p>
+            <pre>
+        i = 0
+        i = 1
+        i = 0
+            </pre>
+        </section>
+        <section>
+            <h2>Which Storage Class to use When ???</h2>
+            <p>The programmer can decide on his/her own which storage class has to be used and when, according to the
+                requirements in a program.</p>
+            <p>He can use the appropriate Storage Class by following the views for usage of different storage classes in
+                different situations:</p>
+            <ul>
+                <li>Economize the memory space requirements consumed by the variables.</li>
+                <li>Improve the speed of execution of the program.</li>
+            </ul>
+            <p>The various rules that govern which storage class to use and when are:</p>
+            <ul>
+                <li>Use register Storage Classes for only those variables which are being used very often e.g. loop
+                    counter variable.</li>
+                <li>Use static Storage Classes only if you want the value of the variables to persist between various
+                    function calls.</li>
+                <li>Use extern Storage Classes for only those variables which are being used by almost all the functions
+                    present in the program.</li>
+                <li>In all other cases, use auto type of storage class.</li>
+            </ul>
+        </section>
+        <section>
+            <div class="container">
+                <button id="prevButton">⮜ Prev</button>
+                <button id="nextButton">Next ⮞</button>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="footer-content">
+            <div class="about-section">
+                <h3>About Us</h3>
+                <p>Welcome to Developer's Library, your ultimate resource for learning programming. Developer's Library
+                    is your go-to platform for free programming Courses/Cheat-Sheet/Projects. Our mission is to provide
+                    high-quality, free educational content to help you succeed in your programming journey. Whether
+                    you're a beginner or an advanced learner, we have something for you.</p>
+            </div>
+            <div class="footer-menu">
+                <h3>Menu</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="terms&conditions.html">Terms and Conditions</a></li>
+                    <li><a href="privacypolicy.html">Privacy Policy</a></li>
+                    <li><a href="disclaimer.html">Disclaimer</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Developer's Library. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

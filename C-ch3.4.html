@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Developer's Library - C Language</title>
+    <link rel="stylesheet" href="C-ch.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="front-end-hero.png" alt="Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="allcheatsheet.html">Cheat-Sheet</a></li>
+                <li><a href="allprojects.html">Projects</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="index.html#FAQ">FAQ</a></li>
+            </ul>
+        </nav>
+        <div class="social-icons">
+            <a href="https://api.whatsapp.com/send?phone=919661850789&text=Hello!"><i class="fab fa-whatsapp"></i></a>
+            <a href="https://www.instagram.com/developers.library/"><i class="fab fa-instagram"></i></a>
+        </div>
+        <button class="menu-toggle">☰</button>
+    </header>
+    <main>
+        <h1 class="chname">Chapter.3.4</h1>
+        <section>
+            <h1>What are the Jumping Statements ???</h1>
+            <p>Jump Statements are the Control Structure Statements that let you change the way of the program typically
+                executes. They enable you to move the control between different areas of the code, usually inside loops,
+                conditional expressions, or functions.</p>
+            <p>In Simple Words, we also say that Jumping Statements are used to transfer the control from one part of
+                the program to another part.</p>
+        </section>
+        <section>
+            <h2>Types of Jumping Statements</h2>
+            <p>The Various Jumping Statements used in C are as follows:</p>
+            <ul>
+                <li>The break Statement</li>
+                <li>The continue Statement</li>
+                <li>The goto Statement</li>
+            </ul>
+        </section>
+        <section>
+            <h3>1. The break Statement</h3>
+            <ul>
+                <li>The break Statement is always used inside the body of the switch statement.</li>
+                <li>It can also be used in any of the loop statements for transfer of control from the loop to the
+                    statement immediately.</li>
+                <li>In switch Statement, it is used as the last statement of the statement block of every case except
+                    the last one.</li>
+                <li>It transfers the control out of the switch statement and the program continues its execution from
+                    the statement following the switch.</li>
+                <li>In while, for, do-while loops, it is always used in conjunction with an if statement.</li>
+                <li>When executed, it transfers the control out of the particular loop and the execution of the program
+                    continues after the looping block.</li>
+            </ul>
+        </section>
+        <section>
+            <h2>Example:</h2>
+            <pre>
+        #include &lt;stdio.h&gt;
+        int main() {
+            // Break statement example
+            for (int i = 1; i &lt;= 10; i++) {
+                if (i == 5) {
+                    printf("Loop terminated at %d\n", i);
+                    break;
+                }
+                printf("Iteration %d\n", i);
+            }
+            return 0;
+        }
+            </pre>
+        </section>
+        <section>
+            <h2>Explanation About Example:</h2>
+            <p>In this example program, we iterate 1 to 10 numbers. But when “i” reaches the value 5, then we use the
+                break Statement which terminates the loop and exits from it.</p>
+        </section>
+        <section>
+            <h3>2. The continue Statement</h3>
+            <ul>
+                <li>The continue statement is used inside the body of the loop Statement.</li>
+                <li>The break statement terminates the loop, while the continue statement does not terminate the loop
+                    but transfers the control back to the first statement.</li>
+                <li>The continue statement is also usually associated with an if Statement.</li>
+                <li>The continue statement transfers the control to the beginning of the loop, bypassing the statements
+                    which are not yet executed.</li>
+            </ul>
+        </section>
+        <section>
+            <h2>Example:</h2>
+            <pre>
+        #include &lt;stdio.h&gt;
+        int main() {
+            // Continue statement example
+            for (int i = 1; i &lt;= 5; i++) {
+                if (i == 3) {
+                    printf("Iteration %d skipped\n", i);
+                    continue;
+                }
+                printf("Iteration %d\n", i);
+            }
+            return 0;
+        }
+            </pre>
+        </section>
+        <section>
+            <h2>Explanation about Example:</h2>
+            <p>In this example program, we iterate from 1 to 5 numbers but when the value of ‘i’ becomes 3, then it
+                executes the continue statement and skips one iteration.</p>
+        </section>
+        <section>
+            <h3>3. The goto Statement</h3>
+            <ul>
+                <li>In C, every program can be written without the use of the goto Statement.</li>
+                <li>Sometimes a situation may occur where we have to use the goto Statement.</li>
+                <li>It is an unconditional transfer of control which means that the sequence of execution will be broken
+                    without performing any test and the control will be transferred to some statement other than the
+                    immediate next one.</li>
+                <li>The goto Statement causes the control to be transferred to the statement whose label is specified in
+                    the goto statement.</li>
+            </ul>
+        </section>
+        <section>
+            <h2>Example:</h2>
+            <pre>
+        #include &lt;stdio.h&gt;
+        int main() {
+            int i = 1;
+        start:
+            printf("Iteration %d\n", i);
+            i++;
+            if (i &lt;= 5) {
+                goto start;
+            }
+            return 0;
+        }
+            </pre>
+        </section>
+        <section>
+            <h2>Explanation about Example:</h2>
+            <p>Here we use the goto Statement. In this, we define a ‘start’ label. When the loop starts, the program
+                goes back to the ‘start’ label if the condition is true.</p>
+        </section>
+        <section>
+            <div class="container">
+                <button id="prevButton">⮜ Prev</button>
+                <button id="nextButton">Next ⮞</button>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="footer-content">
+            <div class="about-section">
+                <h3>About Us</h3>
+                <p>Welcome to Developer's Library, your ultimate resource for learning programming. Developer's Library
+                    is your go-to platform for free programming Courses/Cheat-Sheet/Projects. Our mission is to provide
+                    high-quality, free educational content to help you succeed in your programming journey. Whether
+                    you're a beginner or an advanced learner, we have something for you.</p>
+            </div>
+            <div class="footer-menu">
+                <h3>Menu</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="terms&conditions.html">Terms and Conditions</a></li>
+                    <li><a href="privacypolicy.html">Privacy Policy</a></li>
+                    <li><a href="disclaimer.html">Disclaimer</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Developer's Library. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

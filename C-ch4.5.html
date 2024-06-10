@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Developer's Library - C Language</title>
+    <link rel="stylesheet" href="C-ch.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="front-end-hero.png" alt="Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="allcheatsheet.html">Cheat-Sheet</a></li>
+                <li><a href="allprojects.html">Projects</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="index.html#FAQ">FAQ</a></li>
+            </ul>
+        </nav>
+        <div class="social-icons">
+            <a href="https://api.whatsapp.com/send?phone=919661850789&text=Hello!"><i class="fab fa-whatsapp"></i></a>
+            <a href="https://www.instagram.com/developers.library/"><i class="fab fa-instagram"></i></a>
+        </div>
+        <button class="menu-toggle">☰</button>
+    </header>
+    <main>
+        <h1 class="chname">Chapter.4.5</h1>
+        <section>
+            <h1>What is Passing Parameters to a Functions</h1>
+            <p>The two way communication between the various Functions can be achieved through parameters or arguments
+                and the return statement.</p>
+            <p>The set of arguments defined in a Functions are called formal or dummy arguments whereas the set of
+                corresponding arguments sent by the calling function are called actual arguments.</p>
+            <p>The actual arguments must correspond in number, type and order with formal arguments specified in the
+                function definition. The actual arguments can be constants, variables, expressions or array names.</p>
+            <p>The Functions that parameters can be called in one of the following two ways:</p>
+            <ul>
+                <li>Call by Value</li>
+                <li>Call by Reference</li>
+            </ul>
+        </section>
+        <section>
+            <h2>1. Call by Value</h2>
+            <p>In this type of parameters passing, only the values are passed from the calling function to the called
+                Functions. Therefore this technique is accordingly called as call by value.</p>
+            <p>For the better understanding of the concept of parameter passing let us consider the following function:
+            </p>
+            <pre>
+        /* Bigger of two numbers */
+        int big(int x, int y) {
+            if (x &gt; y)
+                return (x);
+            else 
+                return (y);
+        }
+            </pre>
+            <p>The function <code>big</code> can be called from the Function <code>main()</code> by the following
+                program segment:</p>
+            <pre>
+        :
+        :
+        a = 20;
+        b = 15;
+        c = big(a, b);
+        printf("\n The Bigger Number = %d", c);
+        :
+        :
+            </pre>
+            <p>Once the program segment is obeyed, the following output is produced:</p>
+            <pre>The Bigger Number = 20</pre>
+        </section>
+        <section>
+            <h3>Example: Call By Value Functions</h3>
+            <p>Let’s take an example of Call by Value: In this example, we write a program to calculate factorial of a
+                given number by call by value function:</p>
+            <pre>
+        /* Factorial of Given Number */
+        #include &lt;stdio.h&gt;
+        #include &lt;conio.h&gt;
+        
+        void main() {
+            // Function Prototype is must if we want to return value other than int
+            long fact(int);   
+            int num;
+            long f;
+            clrscr();
+            printf("\nEnter a number");
+            scanf("%d", &num);
+            f = fact(num);
+            printf("\n Factorial of %d = %ld", num, f);
+            getch();
+        }
+        
+        long fact(int n) {
+            int i;
+            long f1 = 1;
+            for (i = 1; i <= n; i++)
+                f1 = f1 * i;
+            return (f1);
+        }
+            </pre>
+            <p>Output:</p>
+            <pre>
+        Enter a number 5
+        Factorial of 5 = 120
+            </pre>
+        </section>
+        <section>
+            <h3>Important Notes:</h3>
+            <ul>
+                <li>Let us now write a program which reads the values of two variables a and b. The contents of a and b
+                    are sent as parameters to a function <code>exchange()</code>.</li>
+                <li>The function exchanges the contents of the parameters with the help of a variable <code>temp</code>.
+                </li>
+                <li>The changed values of a and b are printed.</li>
+            </ul>
+        </section>
+        <section>
+            <h2>2. Call by Reference</h2>
+            <p>If the Programmer desires that the changes made to the formal parameters be reflected to the
+                corresponding actual parameters then he should use call by reference method of parameter passing.</p>
+            <p>This technique passes the addresses or references of the actual parameters to the called function. Thus
+                the actual and formal parameters share the same memory locations.</p>
+            <p>This can be achieved by applying an address of operator <code>(&amp;)</code> to the actual parameters in
+                the function call and value at address operator <code>(*)</code> to the formal parameters in the
+                function definition.</p>
+        </section>
+        <section>
+            <h3>Example: Call by Reference Functions</h3>
+            <p>Let’s take an example of Call by Reference. In this example, we are going to write a program to exchange
+                the contents of two variables by using call by reference method:</p>
+            <pre>
+        /* Exchange two variables by call by reference */
+        #include &lt;stdio.h&gt;
+        #include &lt;conio.h&gt;
+        
+        void main() {
+            void exchange(int*, int*);  
+            int a, b;
+            clrscr();
+            printf("\nEnter two numbers");
+            scanf("%d%d", &a, &b);
+            exchange(&a, &b); // Call by Reference
+            printf("\n The exchanged contents are %d %d", a, b);
+            getch();
+        }
+        
+        void exchange(int* x, int* y) {
+            int temp;
+            temp = *x;
+            *x = *y;
+            *y = temp;
+        }
+            </pre>
+            <p>Output:</p>
+            <pre>
+        Enter two numbers 10 20
+        The exchanged contents are 20 10
+            </pre>
+
+            <ul>
+                <li>In the function call <code>&amp;a</code> i.e. 2002 and <code>&amp;b</code> i.e. 4004 are passed to a
+                    function and received in <code>*x</code> and <code>*y</code>. <code>*x</code> -&gt; value at address
+                    x and <code>*y</code> -&gt; value at address y.</li>
+                <li>When we exchange them through <code>temp</code> variable, in the memory location itself, they are
+                    exchanged. Therefore printed with exchanged results.</li>
+            </ul>
+
+        </section>
+        <section>
+            <h3>Important Note</h3>
+            <p>So we conclude here if we want to return only one value, we must call a function by value. However, if we
+                want to return more than one value at a time then we must call a function by reference.</p>
+        </section>
+        <section>
+            <div class="container">
+                <button id="prevButton">⮜ Prev</button>
+                <button id="nextButton">Next ⮞</button>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="footer-content">
+            <div class="about-section">
+                <h3>About Us</h3>
+                <p>Welcome to Developer's Library, your ultimate resource for learning programming. Developer's Library
+                    is your go-to platform for free programming Courses/Cheat-Sheet/Projects. Our mission is to provide
+                    high-quality, free educational content to help you succeed in your programming journey. Whether
+                    you're a beginner or an advanced learner, we have something for you.</p>
+            </div>
+            <div class="footer-menu">
+                <h3>Menu</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="terms&conditions.html">Terms and Conditions</a></li>
+                    <li><a href="privacypolicy.html">Privacy Policy</a></li>
+                    <li><a href="disclaimer.html">Disclaimer</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Developer's Library. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

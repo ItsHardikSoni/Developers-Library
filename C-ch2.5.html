@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Developer's Library - C Language</title>
+    <link rel="stylesheet" href="C-ch.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="front-end-hero.png" alt="Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="allcheatsheet.html">Cheat-Sheet</a></li>
+                <li><a href="allprojects.html">Projects</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="index.html#FAQ">FAQ</a></li>
+            </ul>
+        </nav>
+        <div class="social-icons">
+            <a href="https://api.whatsapp.com/send?phone=919661850789&text=Hello!"><i class="fab fa-whatsapp"></i></a>
+            <a href="https://www.instagram.com/developers.library/"><i class="fab fa-instagram"></i></a>
+        </div>
+        <button class="menu-toggle">☰</button>
+    </header>
+    <main>
+        <h1 class="chname">Chapter.2.5</h1>
+        <section>    <h1>What are the Switch Case Statement ???</h1>
+            <p>Switch Case is a Conditional Control Structure in C Language, which is used to check the value of one variable and execute code blocks accordingly. In other words, it is especially helpful when you want to compare the value of a single variable or expression to the values of many other constants.</p>
+        </section>
+        <section>    <h2>Syntax:</h2>
+            <p>Here is the syntax of the Switch Case Statement which shows how the switch case works,</p>
+            <pre><code>
+switch (variable) {
+    case value1:
+        // code block to execute if variable equals value1
+        break;
+    case value2:
+        // code block to execute if variable equals value2
+        break;
+    ...
+    default:
+        // code block to execute if variable doesn't match any case
+}
+        </code></pre>
+            <p>Here, “variable” is the variable whose value is being checked, and “value1”, “value2”, etc., are the possible values it can take.</p>
+        </section>
+        <section>    <h2>Example:</h2>
+            <p>Here is the example of Switch Case Statement,</p>
+            <pre><code>
+#include &lt;stdio.h&gt;
+int main() {
+    char grade = 'B';
+    // Switch case statement example
+    switch (grade) {
+        case 'A':
+            printf("Excellent!\n");
+            break;
+        case 'B':
+            printf("Good!\n");
+            break;
+        case 'C':
+            printf("Average!\n");
+            break;
+        default:
+            printf("Need Improvement!\n");
+    }
+    return 0;
+}
+        </code></pre>
+        </section>
+        <section>    <h2>Explanation about Example:</h2>
+            <p>Here we use the Switch Case Statement to check the performance of a student based on the “grade” variable. We define different cases, and according to the true value, the message will be printed, which we set in our cases.</p>
+        </section>
+<section>
+            <div class="container">
+                <button id="prevButton">⮜ Prev</button>
+                <button id="nextButton">Next ⮞</button>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="footer-content">
+            <div class="about-section">
+                <h3>About Us</h3>
+                <p>Welcome to Developer's Library, your ultimate resource for learning programming. Developer's Library
+                    is your go-to platform for free programming Courses/Cheat-Sheet/Projects. Our mission is to provide
+                    high-quality, free educational content to help you succeed in your programming journey. Whether
+                    you're a beginner or an advanced learner, we have something for you.</p>
+            </div>
+            <div class="footer-menu">
+                <h3>Menu</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="terms&conditions.html">Terms and Conditions</a></li>
+                    <li><a href="privacypolicy.html">Privacy Policy</a></li>
+                    <li><a href="disclaimer.html">Disclaimer</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Developer's Library. All rights reserved.</p>
+        </div>
+    </footer>
+    
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,311 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Header Styles */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #018673;
+    padding: 5px 20px;
+    position: relative;
+}
+
+.logo img {
+    height: 75px;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+}
+
+nav ul li {
+    margin: 0 15px;
+    position: relative;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+nav ul li .dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: white;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+nav ul li:hover .dropdown {
+    display: block;
+}
+
+nav ul li .dropdown li {
+    margin: 0;
+    padding: 8px 16px;
+    width: 120px;
+}
+
+.social-icons {
+    display: flex;
+    align-items: center;
+}
+
+.social-icons a {
+    margin: 0 10px;
+    color: black;
+    font-size: 24px;
+}
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px 20px;
+    flex-wrap: wrap;
+}
+
+@media (max-width: 810px) {
+    header {
+        flex-wrap: wrap;
+    }
+
+    nav {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    nav.open {
+        display: flex;
+    }
+
+    nav ul {
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+        width: 150px;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .mascot {
+        display: none;
+    }
+
+    main {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .welcome h1 {
+        font-size: 36px;
+        text-align: center;
+    }
+
+    .welcome p {
+        text-align: center;
+    }
+
+    .mascot img {
+        height: 200px;
+        margin-top: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-wrap: wrap;
+    }
+
+    nav {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    nav.open {
+        display: flex;
+    }
+
+    nav ul {
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+        width: 150px;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .mascot img {
+        height: 200px;
+    }
+
+    .course-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/* Courses Section */
+.courses {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.courses h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.course-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.course-card {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    color: black;
+    margin: 10px;
+    padding: 20px;
+    width: 250px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.52);
+    transition: transform 0.2s;
+}
+
+.course-card:hover {
+    transform: scale(1.05);
+}
+
+.course-card img {
+    width: 100px;
+    /* Smaller image size */
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.course-card p {
+    font-size: 14px;
+    /* Smaller font size */
+    margin-bottom: 10px;
+}
+
+.course-card button {
+    padding: 10px 20px;
+    background-color: #018673;
+    /* Black button background */
+    color: #FFFFFF;
+    /* White text color */
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.course-card button:hover {
+    background-color: #0ea892;
+    /* Darker button background on hover */
+}
+
+/* Footer Styles */
+footer {
+    background-color: #0ea892;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.about-section,
+.footer-menu {
+    flex: 1;
+    margin: 20px;
+    min-width: 250px;
+}
+
+.about-section h3,
+.footer-menu h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.about-section p {
+    font-size: 1em;
+    margin: 5px 0;
+}
+
+.footer-menu ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-menu li {
+    margin-bottom: 10px;
+}
+
+.footer-menu a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-menu a:hover {
+    color: #ddd;
+}
+
+.footer-bottom {
+    background-color: #018673;
+    padding: 10px 0;
+    font-size: 0.9em;
+}
+
+.footer-bottom p {
+    margin: 0;
+}

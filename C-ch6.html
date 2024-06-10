@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Developer's Library - C Language</title>
+    <link rel="stylesheet" href="C-ch.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="front-end-hero.png" alt="Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="allcheatsheet.html">Cheat-Sheet</a></li>
+                <li><a href="allprojects.html">Projects</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="index.html#FAQ">FAQ</a></li>
+            </ul>
+        </nav>
+        <div class="social-icons">
+            <a href="https://api.whatsapp.com/send?phone=919661850789&text=Hello!"><i class="fab fa-whatsapp"></i></a>
+            <a href="https://www.instagram.com/developers.library/"><i class="fab fa-instagram"></i></a>
+        </div>
+        <button class="menu-toggle">☰</button>
+    </header>
+    <main>
+        <section>
+            <h1 class="chname">Chapter.6 - Array</h1>
+            <h1>Introduction – Array</h1>
+            <p>Array – Till now we have used scalar variables or non-subscripted variables. This type of variables represents a memory location in which a single value is stored. Many a times a situation may arise in which there is a need to process a collection of homogeneous or similar type of values. In C, an array is one such type of data structure that can store a group of similar type of data elements stored in contiguous memory locations. The array elements are accessed by providing the name of the storage area or array and a subscript representing the position of the element within the array. To illustrate this, consider a class of 40 students with their marks in an examination. We want to find out the following:</p>
+            <ul>
+                <li>maximum score</li>
+                <li>minimum score</li>
+                <li>average score</li>
+                <li>number of students who got first division</li>
+            </ul>
+            <p>In such a case, we have two options to store the marks in memory:</p>
+            <ol>
+                <li>Use 40 variables to store their individual marks.</li>
+                <li>Use one variable which is called an array or subscripted variable to store 40 values. Out of these two options, obviously the better option is to use one variable i.e. an array variable. Because it is very easy to handle one variable as compared to 40 variables.</li>
+            </ol>
+            <p>e.g. By using the first option we can define 40 variables as:</p>
+            <pre><code>int s1, s2, s3, s4, ..., s40;</code></pre>
+            <p>Whereas by using the second option we can define it as:</p>
+            <pre><code>int s[40];</code></pre>        
+        </section>
+        <section>
+            <div class="container">
+                <button id="prevButton">⮜ Prev</button>
+                <button id="nextButton">Next ⮞</button>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="footer-content">
+            <div class="about-section">
+                <h3>About Us</h3>
+                <p>Welcome to Developer's Library, your ultimate resource for learning programming. Developer's Library
+                    is your go-to platform for free programming Courses/Cheat-Sheet/Projects. Our mission is to provide
+                    high-quality, free educational content to help you succeed in your programming journey. Whether
+                    you're a beginner or an advanced learner, we have something for you.</p>
+            </div>
+            <div class="footer-menu">
+                <h3>Menu</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="terms&conditions.html">Terms and Conditions</a></li>
+                    <li><a href="privacypolicy.html">Privacy Policy</a></li>
+                    <li><a href="disclaimer.html">Disclaimer</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Developer's Library. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

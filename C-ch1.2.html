@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Developer's Library - C Language</title>
+    <link rel="stylesheet" href="C-ch.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="front-end-hero.png" alt="Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="allcheatsheet.html">Cheat-Sheet</a></li>
+                <li><a href="allprojects.html">Projects</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="index.html#FAQ">FAQ</a></li>
+            </ul>
+        </nav>
+        <div class="social-icons">
+            <a href="https://api.whatsapp.com/send?phone=919661850789&text=Hello!"><i class="fab fa-whatsapp"></i></a>
+            <a href="https://www.instagram.com/developers.library/"><i class="fab fa-instagram"></i></a>
+        </div>
+        <button class="menu-toggle">☰</button>
+    </header>
+    <main>
+        <section>
+            <h1 class="chname">Chapter.1.2</h1>
+            <h1>Introduction - First C Program</h1>
+            <p>Here we are going to write a C Language Program and also the explanation of the program. Which things we add
+                in the program and how it works everything we will explain briefly.</p>
+                <ol>
+                    <li><code>#include&lt;stdio.h&gt;</code></li>
+                    <li><code>int main() {...}</code></li>
+                    <li><code>printf("Hello, World!\n");</code></li>
+                    <li><code>return 0;</code></li>
+                </ol>
+        </section>
+        <section>
+            <h2>Explanation about Example:</h2>
+            <p><code>#include &lt;stdio.h&gt;</code> This line includes the standard input-output library
+                <code>&lt;stdio.h&gt;</code> in the Program. It provides functions like <code>printf</code> for input
+                and output operations.</p>
+            <p><code>int main() {...}</code> This is the main function, the entry point of the program. Every C Program
+                must have a main function. It returns an integer <code>int</code> value to the operating system,
+                indicating the program's exit status.</p>
+            <p><code>printf("Hello, World!\n");</code> This line uses the <code>printf</code> function to print the text
+                "Hello, World!" to the console. The <code>\n</code> is an escape sequence representing a newline
+                character, which moves the cursor to the next line after printing.</p>
+            <p><code>return 0;</code> The <code>return</code> statement ends the main function and returns the value 0
+                to the operating system. A return value of 0 conventionally indicates a successful execution of the
+                program.</p>
+        </section>
+        <section>
+            <div class="container">
+                <button id="prevButton">⮜ Prev</button>
+                <button id="nextButton">Next ⮞</button>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="footer-content">
+            <div class="about-section">
+                <h3>About Us</h3>
+                <p>Welcome to Developer's Library, your ultimate resource for learning programming. Developer's Library
+                    is your go-to platform for free programming Courses/Cheat-Sheet/Projects. Our mission is to provide
+                    high-quality, free educational content to help you succeed in your programming journey. Whether
+                    you're a beginner or an advanced learner, we have something for you.</p>
+            </div>
+            <div class="footer-menu">
+                <h3>Menu</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="terms&conditions.html">Terms and Conditions</a></li>
+                    <li><a href="privacypolicy.html">Privacy Policy</a></li>
+                    <li><a href="disclaimer.html">Disclaimer</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Developer's Library. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

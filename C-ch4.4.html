@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Developer's Library - C Language</title>
+    <link rel="stylesheet" href="C-ch.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="front-end-hero.png" alt="Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="allcheatsheet.html">Cheat-Sheet</a></li>
+                <li><a href="allprojects.html">Projects</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="index.html#FAQ">FAQ</a></li>
+            </ul>
+        </nav>
+        <div class="social-icons">
+            <a href="https://api.whatsapp.com/send?phone=919661850789&text=Hello!"><i class="fab fa-whatsapp"></i></a>
+            <a href="https://www.instagram.com/developers.library/"><i class="fab fa-instagram"></i></a>
+        </div>
+        <button class="menu-toggle">☰</button>
+    </header>
+    <main>
+        <h1 class="chname">Chapter.4.4</h1>
+        <section>
+            <h1>Introduction – Functions</h1>
+
+            <p>A complex problem may be decomposed into small or easily manageable parts or modules called Functions.
+                Functions are very useful to read, write, debug, and modify complex problems.</p>
+
+            <p>The user-defined functions may be written in the following ways based on the arguments passed and the
+                image of return statement:</p>
+            <ul>
+                <li>Functions with no argument and no return value.</li>
+                <li>Functions with arguments but no return value.</li>
+                <li>Functions with no arguments but a return value.</li>
+                <li>Functions with arguments and return value.</li>
+            </ul>
+        </section>
+        <section>
+            <h2>1. Functions with no arguments and No Return value</h2>
+
+            <p>In this type of function, the main program will not send any arguments to the function and the function
+                will not return any value to the main program.</p>
+            <p><strong>Example:</strong></p>
+            <p>Here is an example of a function with no arguments and no return value:</p>
+
+            <pre><code>#include &lt;stdio.h&gt;
+            #include &lt;conio.h&gt;
+            
+            void main() {
+                clrscr();
+                printf("\n You are Welcome to the main Program");
+                message();
+                printf("\n Welcome back to the main");
+            }
+            
+            void message() {
+                printf("\n Welcome to the Sub Program,");
+            }
+            </code></pre>
+        </section>
+        <section>
+            <h2>2. Functions with Arguments but no Return Value</h2>
+
+            <p>In this category of function, the main program or calling program will send some argument values but the
+                called program or function sub-program will not return any value. It is a one-way communication between
+                the calling portion of the program and the function block.</p>
+            <p><strong>Example:</strong></p>
+            <p>Here is an example of a function with arguments but no return value:</p>
+
+            <pre><code>#include &lt;stdio.h&gt;
+            #include &lt;conio.h&gt;
+            
+            void main() {
+                void sum(int, int); // Declaration
+                int a, b;
+                clrscr();
+                printf("Enter the value of a & b");
+                scanf("%d%d", &a, &b);
+                sum(a, b);
+                getch();
+            }
+            
+            void sum(int a, int b) {
+                int sum;
+                sum = a + b;
+                printf("sum = %d", sum);
+            }
+            </code></pre>
+
+        </section>
+        <section>
+            <h2>3. Functions with No Argument but Return a Value</h2>
+
+            <p>In this category of function or sub-program, the main program will not send any argument to the function
+                but the function sub-program will send (return) some value to the main program. The data can be
+                transferred only from the function block to the calling function.</p>
+            <p><strong>Example:</strong></p>
+            <p>Here is an example of a function with no arguments but return value:</p>
+
+            <pre><code>#include &lt;stdio.h&gt;
+            #include &lt;conio.h&gt;
+            
+            void main() {
+                int sum(); // Function Declaration 
+                int result;
+                result = sum();
+                printf("sum is = %d", result);
+                getch();
+            }
+            
+            int sum() {
+                int a, b, c;
+                printf("\n Enter the value of a and b");
+                scanf("%d%d", &a, &b);
+                c = a + b;
+                return c;
+            }
+            </code></pre>
+        </section>
+        <section>
+            <h2>4. Functions with Arguments and a Return Value</h2>
+
+            <p>In this category of function, the main program or the calling program will send arguments to the called
+                program and at the end of the called program, the function will send a value back to the main program.
+                Data communication takes place between both the calling portion of a program and the function block.</p>
+            <p><strong>Example:</strong></p>
+            <p>Here is an example of a function with arguments and a return value:</p>
+
+            <pre><code>#include &lt;stdio.h&gt;
+            #include &lt;conio.h&gt;
+            
+            void main() {
+                int sum(int, int); // Declaration 
+                int a, b, result;
+                clrscr();
+                printf("\n Enter the value of a and b");
+                scanf("%d%d", &a, &b);
+                result = sum(a, b);
+                printf("sum is = %d", result);
+                getch();
+            }
+            
+            int sum(int a, int b) {
+                int c;
+                c = a + b;
+                return c;
+            }
+            </code></pre>
+        </section>
+        <section>
+            <div class="container">
+                <button id="prevButton">⮜ Prev</button>
+                <button id="nextButton">Next ⮞</button>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="footer-content">
+            <div class="about-section">
+                <h3>About Us</h3>
+                <p>Welcome to Developer's Library, your ultimate resource for learning programming. Developer's Library
+                    is your go-to platform for free programming Courses/Cheat-Sheet/Projects. Our mission is to provide
+                    high-quality, free educational content to help you succeed in your programming journey. Whether
+                    you're a beginner or an advanced learner, we have something for you.</p>
+            </div>
+            <div class="footer-menu">
+                <h3>Menu</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="terms&conditions.html">Terms and Conditions</a></li>
+                    <li><a href="privacypolicy.html">Privacy Policy</a></li>
+                    <li><a href="disclaimer.html">Disclaimer</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Developer's Library. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

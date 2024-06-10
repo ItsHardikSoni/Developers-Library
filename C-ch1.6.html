@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Developer's Library - C Language</title>
+    <link rel="stylesheet" href="C-ch.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="front-end-hero.png" alt="Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="allcheatsheet.html">Cheat-Sheet</a></li>
+                <li><a href="allprojects.html">Projects</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="index.html#FAQ">FAQ</a></li>
+            </ul>
+        </nav>
+        <div class="social-icons">
+            <a href="https://api.whatsapp.com/send?phone=919661850789&text=Hello!"><i class="fab fa-whatsapp"></i></a>
+            <a href="https://www.instagram.com/developers.library/"><i class="fab fa-instagram"></i></a>
+        </div>
+        <button class="menu-toggle">☰</button>
+    </header>
+    <main>
+        <h1 class="chname">Chapter.1.6</h1>
+        <section>    <h1>What are Input/Output Functions?</h1>
+            <p>Input/Output Functions allow us to communicate with the user. Input Functions allow us to take information from the user, and Output Functions allow us to display that information which we collect from the user.</p>
+        </section>
+        <section>    <h2>Input/Output Functions</h2>
+            <p>We have <code>printf()</code> and <code>scanf()</code>, which are used to display output to the user and take input from the user, respectively. Let’s talk about both and understand briefly how they work.</p>
+        
+        </section>
+        <section>    <h2>printf() Function</h3>
+            <p><code>printf()</code> – This function is used to display the output on the screen. It allows you to format and print various types of data, such as text and variables. For example, if you want to print "Hello World", you would write:</p>
+            <pre><code>printf("Hello, World!\n");</code></pre>
+        </section>
+        <section>    <h2>scanf() Function</h3>
+            <p><code>scanf()</code> – This function is used to take input from the user. For example, if you want to take a number from the user, you would write:</p>
+            <pre><code>scanf("%d", &num);</code></pre>
+            <p><code>%d</code> means we are expecting an integer value and <code>&</code> is used to indicate the address of the variable. This is because <code>scanf()</code> requires the address of the variable to store the input.</p>
+        </section>
+        <section>    <h2>Example: Input/Output</h3>
+            <p>Let’s take an example of input/output functions to understand them briefly:</p>
+            <pre><code>#include &lt;stdio.h&gt;
+        int main() {
+            int num;
+            
+            // Input
+            printf("Enter a number: ");
+            scanf("%d", &num);
+            
+            // Output
+            printf("You entered: %d\n", num);
+            
+            return 0;
+        }</code></pre>
+        </section>
+<section>
+            <div class="container">
+                <button id="prevButton">⮜ Prev</button>
+                <button id="nextButton">Next ⮞</button>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="footer-content">
+            <div class="about-section">
+                <h3>About Us</h3>
+                <p>Welcome to Developer's Library, your ultimate resource for learning programming. Developer's Library
+                    is your go-to platform for free programming Courses/Cheat-Sheet/Projects. Our mission is to provide
+                    high-quality, free educational content to help you succeed in your programming journey. Whether
+                    you're a beginner or an advanced learner, we have something for you.</p>
+            </div>
+            <div class="footer-menu">
+                <h3>Menu</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="terms&conditions.html">Terms and Conditions</a></li>
+                    <li><a href="privacypolicy.html">Privacy Policy</a></li>
+                    <li><a href="disclaimer.html">Disclaimer</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Developer's Library. All rights reserved.</p>
+        </div>
+    </footer>
+    
+    <script src="script.js"></script>
+</body>
+
+</html>
